@@ -1,0 +1,88 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <form action="" name="myForm" onsubmit="return(validate())">
+        <table>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" name="Name"></td>
+                <div id="errorMessage"></div>
+            </tr>
+
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="Password"></td>
+                <div id='errorMessagePassword'> </div>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Submit"></td>
+            </tr>
+        </table>
+    </form>
+    <form>
+        <label for="Enquiry">I would like you to give me your email address</label><br>
+        <input type="email" name="Email" id="Email"><br>
+        <label for="tel">Telephone number</label>
+        <input type="tel" name="tel" id="tel">
+        <span id="errorAlert"></span>
+        <button type="submit">Submit</button>
+    </form>
+    <form name="FormsData" novalidate>
+
+        <label for="name">Username</label>
+        <br><input type="email" name="userName" id="userData" required minlength="4">
+        <span class="error active" aria-live="polite"></span>
+
+        <br>
+        <label for="password">password</label>
+        <br> <input type="password" id="password" required minlength="5">
+        <span class="errorMessage" aria-live="polite"></span>
+        <br>
+        <input type="submit" value="Submit">
+
+    </form>
+
+    <style>
+        input {
+            display: block
+        }
+        
+        input[type=email] {
+            appearance: none;
+            margin: 0;
+        }
+        
+        input:invalid {
+            border-color: #900;
+            background-color: #FDD
+        }
+        
+        input:focus:invalid {
+            outline: none
+        }
+        
+        .error .active {
+            padding: 0.3em;
+            color: red
+        }
+        
+        .errorMessage {
+            padding: 0.5em
+        }
+    </style>
+    <script src="main.js">
+    </script>
+</body>
+
+
+</html>
+
+</html>
